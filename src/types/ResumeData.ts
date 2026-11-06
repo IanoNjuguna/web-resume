@@ -56,7 +56,8 @@ interface DataOpenSourceItem {
   userRepo: string;
   description: string;
   rawDates?: string;
-  relevant: boolean;
+  /** `null`/unset means show it; `false` hides the entry */
+  relevant?: boolean | null;
 }
 
 interface ResumeData {
