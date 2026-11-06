@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import ItemContainer from "../section/ItemContainer";
@@ -62,11 +61,9 @@ export const WorkExperience = () => {
 
   const { work } = data.file.childDataJson;
 
-  const aggregated = [...work].sort((a, b) =>
-    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1,
-  );
-
-  return <PureWorkExperience history={aggregated} />;
+  // the order in data.json is the order on the page; it is editorial, not
+  // chronological (a current role can start later than one below it)
+  return <PureWorkExperience history={work} />;
 };
 
 export default WorkExperience;

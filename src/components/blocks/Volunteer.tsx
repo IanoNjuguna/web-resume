@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import ItemContainer from "../section/ItemContainer";
@@ -69,11 +68,8 @@ export const WorkExperience = () => {
 
   const { volunteer } = data.file.childDataJson;
 
-  const aggregated = [...volunteer].sort((a, b) =>
-    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1,
-  );
-
-  return <PureWorkExperience history={aggregated} />;
+  // data.json order is the display order, same as experience
+  return <PureWorkExperience history={volunteer} />;
 };
 
 export default WorkExperience;
