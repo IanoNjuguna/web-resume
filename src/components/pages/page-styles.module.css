@@ -59,14 +59,22 @@
 }
 
 /* A real resume runs longer than the fake data this template shipped with:
- * five roles, a bio, eight skill buckets and three projects do not fit one
+ * five roles, a bio, eight skill buckets and four projects do not fit one
  * A4 page at a readable size. In print the card becomes a flow - page one
- * is the header, bio and experience; the sidebar blocks follow on page two
- * in two columns. The on-screen card layout is untouched. */
+ * is the header, bio and experience; page two carries the sidebar blocks in
+ * two balanced columns. The on-screen card layout is untouched: the column
+ * wrappers are display:contents until print. */
+.sidebar-columns > div {
+  display: contents;
+}
+
 @media print {
   .resume-contents {
     display: block;
     font-size: 11px;
+    /* the card is a fixed-height page; let print content overflow it and
+     * paginate instead of being clipped at the card edge */
+    overflow: visible;
   }
 
   /* keep the experience column at a readable measure */
@@ -74,16 +82,18 @@
     max-width: 150mm;
   }
 
-  .resume-contents > div:last-child {
-    display: block;
-    column-count: 2;
+  .sidebar-columns {
+    display: flex;
     column-gap: 9mm;
-    column-fill: auto;
-    height: 275mm;
+    align-items: flex-start;
     break-before: page;
+    font-size: 10.5px;
+    line-height: 1.4;
   }
 
-  .resume-contents > div:last-child > div {
-    break-inside: avoid;
+  .sidebar-columns > div {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
   }
 }
