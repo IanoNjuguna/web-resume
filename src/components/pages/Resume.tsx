@@ -6,6 +6,7 @@ import Education from "../blocks/Education";
 import Header from "../blocks/Header";
 import OpenSource from "../blocks/OpenSource";
 import Skills from "../blocks/Skills";
+import Summary from "../blocks/Summary";
 import Volunteer from "../blocks/Volunteer";
 import WorkExperience from "../blocks/WorkExperience";
 import { container, resumeContents, strip } from "./page-styles.module.css";
@@ -38,6 +39,7 @@ const Resume = () => {
       <div className="flex flex-col p-4">
         <Header isCoverLetter={false} />
         <hr className="block my-2 mb-4 bg-white mx-20" />
+        <Summary />
         <div className={`${resumeContents} overflow-hidden`}>
           <WorkExperience />
           <div style={{ gridArea: "sk" }}>

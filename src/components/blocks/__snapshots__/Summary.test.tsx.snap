@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PureSummary /> renders OK 1`] = `
+<div
+  class="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug"
+  data-testid="summary"
+>
+  <p>
+    I build payments software in Kenya.
+  </p>
+</div>
+`;
+
+exports[`<PureSummary /> renders markdown 1`] = `
+<div
+  class="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug"
+  data-testid="summary"
+>
+  <p>
+    <strong>
+      plain
+    </strong>
+    , then 
+    <em>
+      some
+    </em>
+     prose
+  </p>
+</div>
+`;

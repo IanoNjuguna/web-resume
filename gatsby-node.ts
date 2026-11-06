@@ -5,6 +5,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     actions.createTypes(`
       type DataJsonBasics implements Node {
         technical: Boolean
+        summary: String
       }
 
       type DataJsonOpenSource implements Node {

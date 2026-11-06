@@ -52,6 +52,7 @@ const createBasics = (): DataBasics => {
     email: faker.helpers.fake("{{internet.email}}"),
     phone: phone.length === 10 ? phone : "1234567890",
     website: faker.helpers.fake("{{internet.url}}"),
+    summary: faker.helpers.fake("{{lorem.paragraph}}"),
     location,
     profiles,
   };

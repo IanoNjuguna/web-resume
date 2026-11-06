@@ -10,6 +10,8 @@ interface DataBasics {
   email: string;
   phone: string;
   website: string;
+  /** markdown; a short bio shown under the header */
+  summary?: string;
   location: {
     location: string;
     postalCode: string;
