@@ -58,13 +58,32 @@
     "img body";
 }
 
-/* A real resume runs longer than the fake data this template shipped with.
- * Print one step down, and give experience the wider column, so a full
- * history still fits a single A4 page; if it still overflows, the rules
- * above let it paginate instead of clipping. */
+/* A real resume runs longer than the fake data this template shipped with:
+ * five roles, a bio, eight skill buckets and three projects do not fit one
+ * A4 page at a readable size. In print the card becomes a flow - page one
+ * is the header, bio and experience; the sidebar blocks follow on page two
+ * in two columns. The on-screen card layout is untouched. */
 @media print {
   .resume-contents {
-    font-size: 10px;
-    grid-template-columns: 1.4fr 1fr;
+    display: block;
+    font-size: 11px;
+  }
+
+  /* keep the experience column at a readable measure */
+  .resume-contents > div:first-child {
+    max-width: 150mm;
+  }
+
+  .resume-contents > div:last-child {
+    display: block;
+    column-count: 2;
+    column-gap: 9mm;
+    column-fill: auto;
+    height: 275mm;
+    break-before: page;
+  }
+
+  .resume-contents > div:last-child > div {
+    break-inside: avoid;
   }
 }
