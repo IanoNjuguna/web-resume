@@ -5,7 +5,8 @@ import type {
   CoverLetterFrontmatter,
   DataBasics,
   DataEducationItem,
-  DataOpenSourceItem,
+  DataProjectItem,
+  DataPublicationItem,
   DataSkillsItem,
   DataVolunteerItem,
   DataWorkItem,
@@ -173,20 +174,41 @@ const createSkills = (num: number): DataSkillsItem[] => {
   return skillsList;
 };
 
-const createOpenSource = (num: number): DataOpenSourceItem[] => {
-  const res: DataOpenSourceItem[] = [];
+const createProjects = (num: number): DataProjectItem[] => {
+  const res: DataProjectItem[] = [];
+
+  for (let i = 0; i < num; i++) {
+    const project: DataProjectItem = {
+      name: faker.word.noun(),
+      description: faker.word.words(),
+    };
+
+    if (Math.random() >= 0.5) project.link = faker.internet.url();
+
+    res.push(project);
+  }
+
+  return res;
+};
+
+const createCertifications = (num: number): string[] => {
+  const res: string[] = [];
+
+  for (let i = 0; i < num; i++) {
+    res.push(faker.helpers.fake("{{word.words}} {{word.noun}}"));
+  }
+
+  return res;
+};
+
+const createPublications = (num: number): DataPublicationItem[] => {
+  const res: DataPublicationItem[] = [];
 
   for (let i = 0; i < num; i++) {
     res.push({
-      forge: "github",
-      userRepo: `${faker.internet.username()}/${faker.word.noun()}-${faker.word.verb()}`,
+      title: faker.helpers.fake("{{word.words}}"),
       description: faker.word.words(),
-      relevant: Math.random() >= 0.5,
-      rawDates: `${dayjs(faker.date.past()).format("MMM YY")} - ${dayjs(
-        faker.date.soon(),
-      ).format("MMM YY")}`,
     });
-    num;
   }
 
   return res;
@@ -198,7 +220,10 @@ export const createFakeData = (): string => {
   const basics = createBasics();
   const work = createWork(3);
   const volunteer = createVolunteer(Math.floor(Math.random() * 2));
-  const openSource = createOpenSource(Math.floor(Math.random() * 2));
+  const projects = createProjects(Math.floor(Math.random() * 3));
+  const certifications = createCertifications(Math.floor(Math.random() * 3));
+  const publications = createPublications(Math.floor(Math.random() * 2));
+  const languages = ["English (fluent)", "Kiswahili (native)"];
   const education = createEducation(Math.floor(Math.random() * 2));
   const skills = createSkills(Math.floor(Math.random() * 5));
 
@@ -206,7 +231,10 @@ export const createFakeData = (): string => {
     basics,
     work,
     volunteer,
-    openSource,
+    projects,
+    certifications,
+    publications,
+    languages,
     education,
     skills,
   } as ResumeData);

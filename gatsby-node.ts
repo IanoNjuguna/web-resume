@@ -8,20 +8,27 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
         summary: String
       }
 
-      type DataJsonOpenSource implements Node {
-        forge: String
-        userRepo: String
-        description: String
-        rawDates: String
-        relevant: Boolean
-      }
-
       type DataJsonEducation implements Node {
         courses: [String]
       }
 
+      type DataJsonProject implements Node {
+        name: String
+        description: String
+        link: String
+        rawDates: String
+      }
+
+      type DataJsonPublication implements Node {
+        title: String
+        description: String
+      }
+
       type DataJson implements Node @childOf(types: ["File"]) {
-        openSource: [DataJsonOpenSource]
+        projects: [DataJsonProject]
+        certifications: [String]
+        publications: [DataJsonPublication]
+        languages: [String]
       }
 
       type DataJsonVolunteer implements Node {

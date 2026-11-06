@@ -62,11 +62,27 @@ interface DataOpenSourceItem {
   relevant?: boolean | null;
 }
 
+interface DataProjectItem {
+  name: string;
+  description: string;
+  /** optional; not every project is public */
+  link?: string;
+  rawDates?: string;
+}
+
+interface DataPublicationItem {
+  title: string;
+  description: string;
+}
+
 interface ResumeData {
   basics: DataBasics;
   work: DataWorkItem[];
   volunteer: DataVolunteerItem[];
-  openSource: DataOpenSourceItem[];
+  projects: DataProjectItem[];
+  certifications: string[];
+  publications: DataPublicationItem[];
+  languages: string[];
   education: DataEducationItem[];
   skills: DataSkillsItem[];
 }
@@ -89,6 +105,8 @@ export type {
   DataEducationItem,
   DataSkillsItem,
   DataOpenSourceItem,
+  DataProjectItem,
+  DataPublicationItem,
   ResumeData,
   CoverLetterFrontmatter,
 };

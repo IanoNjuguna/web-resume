@@ -1,15 +1,23 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
+import Certifications from "../blocks/Certifications";
 import Contact from "../blocks/Contact";
 import Education from "../blocks/Education";
 import Header from "../blocks/Header";
-import OpenSource from "../blocks/OpenSource";
+import Languages from "../blocks/Languages";
+import Projects from "../blocks/Projects";
+import Publications from "../blocks/Publications";
 import Skills from "../blocks/Skills";
 import Summary from "../blocks/Summary";
 import Volunteer from "../blocks/Volunteer";
 import WorkExperience from "../blocks/WorkExperience";
-import { container, resumeContents, strip } from "./page-styles.module.css";
+import {
+  container,
+  resumeContents,
+  sidebarColumns,
+  strip,
+} from "./page-styles.module.css";
 
 const Resume = () => {
   const data = useStaticQuery(
@@ -42,12 +50,19 @@ const Resume = () => {
         <Summary />
         <div className={`${resumeContents} overflow-hidden`}>
           <WorkExperience />
-          <div style={{ gridArea: "sk" }}>
-            <Contact />
-            <Skills />
-            <Education />
-            <OpenSource />
-            <Volunteer />
+          <div style={{ gridArea: "sk" }} className={sidebarColumns}>
+            <div>
+              <Contact />
+              <Skills />
+              <Languages />
+              <Education />
+            </div>
+            <div>
+              <Projects />
+              <Certifications />
+              <Publications />
+              <Volunteer />
+            </div>
           </div>
         </div>
       </div>

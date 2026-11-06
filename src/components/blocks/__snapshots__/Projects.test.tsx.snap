@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PureProjects /> renders OK 1`] = `
+<div
+  data-testid="projects"
+>
+  <div
+    class="mx-4 mb-4"
+    data-testid="sectionContainer"
+  >
+    <h2
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
+      data-testid="sectionTitle"
+    >
+      Selected Projects
+    </h2>
+    <div
+      class="break-inside-avoid"
+      data-testid="sectionItemDetails"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        Seti Live
+      </h1>
+      <div
+        class="italic mb-1"
+      >
+        https://github.com/IanoNjuguna/seti-v4
+      </div>
+      <p>
+        Merchant stablecoin settlement.
+      </p>
+    </div>
+    <div
+      class="break-inside-avoid"
+      data-testid="sectionItemDetails"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        GossipBench
+      </h1>
+      <p>
+        Load harness for gossipsub meshes.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PureProjects /> renders every project 1`] = `
+<div
+  data-testid="projects"
+>
+  <div
+    class="mx-4 mb-4"
+    data-testid="sectionContainer"
+  >
+    <h2
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
+      data-testid="sectionTitle"
+    >
+      Selected Projects
+    </h2>
+    <div
+      class="break-inside-avoid"
+      data-testid="sectionItemDetails"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        Seti Live
+      </h1>
+      <div
+        class="italic mb-1"
+      >
+        https://github.com/IanoNjuguna/seti-v4
+      </div>
+      <p>
+        Merchant stablecoin settlement.
+      </p>
+    </div>
+    <div
+      class="break-inside-avoid"
+      data-testid="sectionItemDetails"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        GossipBench
+      </h1>
+      <p>
+        Load harness for gossipsub meshes.
+      </p>
+    </div>
+  </div>
+</div>
+`;
