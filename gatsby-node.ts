@@ -15,6 +15,10 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
         relevant: Boolean
       }
 
+      type DataJsonEducation implements Node {
+        courses: [String]
+      }
+
       type DataJson implements Node @childOf(types: ["File"]) {
         openSource: [DataJsonOpenSource]
       }
