@@ -6,12 +6,13 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
   data-testid="sectionContainer"
 >
   <h2
-    class="font-mono text-lg font-bold uppercase text-orchid-600"
+    class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
     data-testid="sectionTitle"
   >
     Reason #8: Regret
   </h2>
   <div
+    class="break-inside-avoid"
     data-testid="sectionItemContainer"
   >
     <div

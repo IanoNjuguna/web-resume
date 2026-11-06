@@ -13,7 +13,7 @@ export const PureSummary = ({ summary }: PureSummaryTypes) => {
   return (
     <div
       data-testid="summary"
-      className="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug"
+      className="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug break-inside-avoid"
     >
       <ReactMarkdown skipHtml>{summary}</ReactMarkdown>
     </div>

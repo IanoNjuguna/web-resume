@@ -2,7 +2,7 @@
 
 exports[`<PureSummary /> renders OK 1`] = `
 <div
-  class="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug"
+  class="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug break-inside-avoid"
   data-testid="summary"
 >
   <p>
@@ -13,7 +13,7 @@ exports[`<PureSummary /> renders OK 1`] = `
 
 exports[`<PureSummary /> renders markdown 1`] = `
 <div
-  class="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug"
+  class="mx-4 mb-4 text-sm leading-relaxed text-gray-800 print:text-[10.5px] print:leading-snug break-inside-avoid"
   data-testid="summary"
 >
   <p>

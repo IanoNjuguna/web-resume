@@ -61,7 +61,7 @@ const ItemContainer = ({
   const hasDates = fromDate !== undefined && fromDate !== "";
 
   return (
-    <div data-testid="sectionItemContainer">
+    <div data-testid="sectionItemContainer" className="break-inside-avoid">
       <Title title={title ?? studyTitle} />
       <div data-testid="byline" className="italic mb-1">
         {hasDates && <Dates from={fromDate} to={toDate} />}

@@ -9,7 +9,7 @@ exports[`<PureEducation /> bails out on no data 1`] = `
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
       data-testid="sectionTitle"
     >
       Education
@@ -27,12 +27,13 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
       data-testid="sectionTitle"
     >
       Education
     </h2>
     <div
+      class="break-inside-avoid"
       data-testid="sectionItemContainer"
     >
       <h1
@@ -86,12 +87,13 @@ exports[`<PureEducation /> no course details? 1`] = `
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
       data-testid="sectionTitle"
     >
       Education
     </h2>
     <div
+      class="break-inside-avoid"
       data-testid="sectionItemContainer"
     >
       <h1
@@ -155,12 +157,13 @@ exports[`<PureEducation /> renders OK 1`] = `
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
       data-testid="sectionTitle"
     >
       Education
     </h2>
     <div
+      class="break-inside-avoid"
       data-testid="sectionItemContainer"
     >
       <h1
@@ -214,12 +217,13 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      class="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
       data-testid="sectionTitle"
     >
       Education
     </h2>
     <div
+      class="break-inside-avoid"
       data-testid="sectionItemContainer"
     >
       <h1

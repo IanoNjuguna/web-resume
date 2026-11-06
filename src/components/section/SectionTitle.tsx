@@ -10,7 +10,7 @@ const SectionTitle = ({ title }: SectionTitleTypes) => {
   return (
     <h2
       data-testid="sectionTitle"
-      className="font-mono text-lg font-bold uppercase text-orchid-600"
+      className="font-mono text-lg font-bold uppercase text-orchid-600 break-after-avoid"
     >
       {title}
     </h2>
