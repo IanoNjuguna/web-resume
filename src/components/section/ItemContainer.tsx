@@ -57,12 +57,15 @@ const ItemContainer = ({
   let displaySubtitle = true;
   if (subtitle === "" || institution === "") displaySubtitle = false;
 
+  // an entry with no dates should not print a dangling " | " separator
+  const hasDates = fromDate !== undefined && fromDate !== "";
+
   return (
     <div data-testid="sectionItemContainer">
       <Title title={title ?? studyTitle} />
       <div data-testid="byline" className="italic mb-1">
-        <Dates from={fromDate} to={toDate} />
-        {" | "}
+        {hasDates && <Dates from={fromDate} to={toDate} />}
+        {hasDates && " | "}
         {displaySubtitle && (
           <Subtitle link={link} subtitle={subtitle ?? institution} />
         )}
