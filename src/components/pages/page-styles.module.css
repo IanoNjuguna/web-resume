@@ -14,6 +14,13 @@
 @media print {
   .container {
     @apply mb-0 shadow-none m-0;
+    /* let a long resume flow onto a second page instead of clipping it */
+    max-height: none;
+    height: auto;
+  }
+
+  .resume-contents {
+    overflow: visible;
   }
 }
 
@@ -49,4 +56,13 @@
   grid-template-areas:
     "img title"
     "img body";
+}
+
+/* A real resume runs longer than the fake data this template shipped with.
+ * Print one step down so a full history still fits a single A4 page; if it
+ * still overflows, the rules above let it paginate instead of clipping. */
+@media print {
+  .resume-contents {
+    font-size: 11.5px;
+  }
 }
