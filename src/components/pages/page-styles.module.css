@@ -59,10 +59,12 @@
 }
 
 /* A real resume runs longer than the fake data this template shipped with.
- * Print one step down so a full history still fits a single A4 page; if it
- * still overflows, the rules above let it paginate instead of clipping. */
+ * Print one step down, and give experience the wider column, so a full
+ * history still fits a single A4 page; if it still overflows, the rules
+ * above let it paginate instead of clipping. */
 @media print {
   .resume-contents {
-    font-size: 11.5px;
+    font-size: 10px;
+    grid-template-columns: 1.4fr 1fr;
   }
 }
